@@ -5,6 +5,7 @@ class CreateStories < ActiveRecord::Migration[5.2]
       t.text :content
 
       t.timestamps
+      t.belongs_to :user, index: true
     end
   end
 end

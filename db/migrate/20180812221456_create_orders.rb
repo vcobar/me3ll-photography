@@ -7,6 +7,7 @@ class CreateOrders < ActiveRecord::Migration[5.2]
       t.decimal :sub_total, null: false, precision: 15, scale: 2
 
       t.timestamps
+      t.belongs_to :user, index: true
     end
   end
 end
