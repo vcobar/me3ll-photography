@@ -5,8 +5,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track": "reload" %>
   </head>
 
   <body>
@@ -14,6 +13,25 @@
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
-    <%= yield %>
+    <!-- Navigation -->
+    <%= render "shared/navigation" %>
+
+    <!-- Page Content -->
+    <div class="container">
+
+      <%= yield %>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Me3llPhotography 2018</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <%= render "shared/javascripts" %>
   </body>
 </html>
